@@ -10,7 +10,7 @@ let outputEl = document.querySelector('#name-input');
 
 function onInputChange(event) {
     inputEl = event.currentTarget.value;
-    console.log(outputEl);
+    console.log(inputEl);
 
     inputEl !== ' ' ? (outputEl.textContent = inputEl.trim()) : 'Anonymous';
 };
