@@ -23,6 +23,7 @@ let valueEl = Number(document.querySelector('#value').textContent);
 let counterValue = document.querySelector('#value');
 
 
+
 const decrBtn = document.querySelector('#counter').firstElementChild;
 const incrBtn = document.querySelector('#counter').lastElementChild;
 
