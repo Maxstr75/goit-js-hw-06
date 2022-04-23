@@ -18,7 +18,7 @@ const input = document.querySelector('input');
 inputEl.addEventListener('change', e => {
   const text = e.target.value;
 
-  if (text.length === +inputLength) {
+  if (text.length == inputLength) {
     inputEl.classList.add('valid');
     inputEl.classList.remove('invalid');
   } else {
