@@ -12,7 +12,7 @@ function onInputChange(event) {
     inputEl = event.currentTarget.value;
     console.log(inputEl);
 
-    inputEl !== ' ' ? (outputEl.innerText = inputEl.getAttributeNames()) : 'Anonymous';
+    inputEl !== ' ' ? (outputEl.innerText = inputEl.trim()) : 'Anonymous';
 };
 
 
