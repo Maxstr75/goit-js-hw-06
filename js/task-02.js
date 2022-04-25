@@ -13,7 +13,9 @@ console.log(idEl);
 
 
 const elements = ingredients.map(options => {
-  const ingredientEl = createElement('li');
-  ingredientEl.textContent = 'option';
-  idEl.append(...elements);
+  const ingredientEl = document.createElement('li');
+  ingredientEl.textContent = options;
+  ingredientEl.classList.add('item');
+  return ingredientEl;
 });
+idEl.append(...elements);

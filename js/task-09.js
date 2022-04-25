@@ -5,17 +5,7 @@
 //   <button type="button" class="change-color">Change color</button>
 // </div> */}
 
-const refs = {
-    body: document.body,
-    btnStart: document.querySelector('button[data-action = "start"]'),
-    btnStop: document.querySelector('button[data-action = "stop"]'),
-}
 
-const INTERVAL_DELAY = 1000;
-let intervalId = null;
-
-refs.btnStart.addEventListener('click', changeColor);
-refs.btnStop.addEventListener('click', onBtnStop);
 
 const randomIntegerFromInterval = () => {
   return Math.floor(Math.random() *  16777215);
