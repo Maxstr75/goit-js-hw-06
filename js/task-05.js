@@ -6,10 +6,15 @@
 const inputEl= document.querySelector('#name-input');
 const outputEl= document.querySelector('#name-output');
 inputEl.addEventListener('input', getNewName);
-function getNewName() {
-    if (inputEl.value.trim() === '') {
-        outputEl.textContent = 'Anonymous';
-    } else {
-        outputEl.textContent = inputEl.value;
-    };
+// function getNewName() {
+//     if (inputEl.value.trim() === '') {
+//         outputEl.textContent = 'Anonymous';
+//     } else {
+//         outputEl.textContent = inputEl.value;
+//     };
+// };
+
+function getNewName(event) {
+  const value = event.target.value.trim();
+  return (outputEl.textContent = !value ? 'Anonymous' : value);
 };
