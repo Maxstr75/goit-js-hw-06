@@ -3,18 +3,13 @@
 // <input type="text" id="name-input" placeholder="Please enter your name" />
 // <h1>Hello, <span id="name-output">Anonymous</span>!</h1>
 
-let inputEl = document.querySelector('#name-input');
-inputEl.addEventListener('input', onInputChange);
-
-let outputEl = document.querySelector('#name-input');
-
-function onInputChange(event) {
-    inputEl = event.currentTarget.value;
-    console.log(inputEl);
-
-    // inputEl !== ' ' ? (outputEl.textContent = inputEl.trim()) : 'Anonymous';
-
-    outputEl.textContent = inputEl === ' ' ? inputEl.trim() : 'Anonimous';
+const inputEl= document.querySelector('#name-input');
+const outputEl= document.querySelector('#name-output');
+inputEl.addEventListener('input', getNewName);
+function getNewName() {
+    if (inputEl.value.trim() === '') {
+        outputEl.textContent = 'Anonymous';
+    } else {
+        outputEl.textContent = inputEl.value;
+    };
 };
-
-
